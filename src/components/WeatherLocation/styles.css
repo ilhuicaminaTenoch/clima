@@ -1,0 +1,20 @@
+.locationContent{
+    width: 100%;
+    height: 35px;
+    text-align: left;
+    padding-left: 10px;
+    color: #888;
+    line-height: 35px;
+}
+
+.locationContent h1{
+    margin: 0;
+}
+.weatherLocationContent{
+    width: 400px;
+    padding: 25px;
+    font-family: 'Robot', sans-serif;
+    box-shadow: 10px 10px 40px -12px rgba(0, 0, 0, 0.75); 
+}
+
+
