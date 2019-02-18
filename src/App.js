@@ -18,10 +18,22 @@ const cities = [
 
 ];
 class App extends Component {
+
+  constructor(){
+    super();
+    this.state = { city: null }
+  }
+
   handleSelectedLocation = city => {
+    /*
+    *Establece un nuevo estado en el componente
+    *Se usa la vercion simplificada del cambio del estado
+    */
+    this.setState({city});
     console.log(`handleSelectedLocation ${city}`);
   };
   render() {
+    const {city} = this.state;
     return (
       <Grid>
         <Row>
@@ -38,9 +50,10 @@ class App extends Component {
             <LocationList cities={cities} onSelectedLocation={this.handleSelectedLocation}></LocationList>
           </Col>
           <Col xs={12} md={6}>
-            <Paper zDepth={4}>
+            <Paper>
               <div className="details">
-                <ForecastExtended></ForecastExtended>
+              {city && <ForecastExtended city={city}></ForecastExtended>}
+                
               </div>
             </Paper>
           </Col>
